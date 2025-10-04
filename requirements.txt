@@ -1,0 +1,52 @@
+# Core Dependencies
+torch>=1.12.0
+torchvision>=0.13.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Interactive Visualization
+streamlit>=1.28.0
+plotly>=5.0.0
+gradio>=3.40.0
+ipywidgets>=8.0.0
+
+# Data Processing
+pandas>=1.4.0
+scikit-learn>=1.1.0
+transformers>=4.21.0
+tokenizers>=0.13.0
+h5py>=3.7.0
+
+# Jupyter Environment
+jupyter>=1.0.0
+jupyterlab>=3.4.0
+notebook>=6.4.0
+ipython>=8.0.0
+
+# Testing and Development
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=0.971
+
+# Performance and Profiling
+tqdm>=4.64.0
+memory-profiler>=0.60.0
+line-profiler>=4.0.0
+
+# Utilities
+pyyaml>=6.0
+jsonschema>=4.0.0
+click>=8.0.0
+python-dotenv>=0.20.0
+
+# Optional GPU Support
+# Uncomment if using CUDA
+# torch-audio>=0.12.0+cu116 -f https://download.pytorch.org/whl/torch_stable.html
+
+# Export and Sharing
+pillow>=9.0.0
+kaleido>=0.2.1
+moviepy>=1.0.3

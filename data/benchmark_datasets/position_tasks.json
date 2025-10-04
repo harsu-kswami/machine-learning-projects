@@ -1,0 +1,181 @@
+{
+    "metadata": {
+      "name": "Positional Encoding Benchmark Tasks",
+      "version": "1.0",
+      "created": "2025-10-03",
+      "description": "Benchmark tasks specifically designed to evaluate positional encoding capabilities",
+      "tasks": [
+        "position_identification",
+        "relative_position",
+        "sequence_ordering",
+        "distance_sensitivity",
+        "extrapolation"
+      ]
+    },
+    "tasks": {
+      "position_identification": {
+        "description": "Identify the absolute position of specific tokens in sequences",
+        "examples": [
+          {
+            "input": "The quick brown fox jumps over the lazy dog",
+            "target_token": "fox",
+            "expected_position": 3,
+            "difficulty": "easy"
+          },
+          {
+            "input": "Machine learning models require extensive training data for optimal performance",
+            "target_token": "training",
+            "expected_position": 6,
+            "difficulty": "medium"
+          },
+          {
+            "input": "Transformer architectures with self-attention mechanisms have revolutionized natural language processing",
+            "target_token": "mechanisms",
+            "expected_position": 5,
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "relative_position": {
+        "description": "Determine relative distances between pairs of tokens",
+        "examples": [
+          {
+            "input": "The cat sat on the mat",
+            "token_pair": ["cat", "mat"],
+            "expected_distance": 4,
+            "difficulty": "easy"
+          },
+          {
+            "input": "Deep neural networks learn complex patterns from training data",
+            "token_pair": ["networks", "data"],
+            "expected_distance": 6,
+            "difficulty": "medium"
+          },
+          {
+            "input": "Attention mechanisms allow transformers to focus on relevant parts of the input sequence",
+            "token_pair": ["mechanisms", "sequence"],
+            "expected_distance": 10,
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "sequence_ordering": {
+        "description": "Determine if sequences are in correct chronological or logical order",
+        "examples": [
+          {
+            "input": "First second third fourth fifth",
+            "is_correctly_ordered": true,
+            "difficulty": "easy"
+          },
+          {
+            "input": "Monday Wednesday Tuesday Thursday Friday",
+            "is_correctly_ordered": false,
+            "correct_order": "Monday Tuesday Wednesday Thursday Friday",
+            "difficulty": "medium"
+          },
+          {
+            "input": "Preprocessing training validation testing deployment",
+            "is_correctly_ordered": true,
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "distance_sensitivity": {
+        "description": "Evaluate how well models distinguish between near and far token relationships",
+        "examples": [
+          {
+            "input": "A B C D E F G H I J",
+            "query_token": "E",
+            "near_tokens": ["D", "F"],
+            "far_tokens": ["A", "J"],
+            "expected_stronger_attention": "near_tokens",
+            "difficulty": "easy"
+          },
+          {
+            "input": "The quick brown fox jumps over the lazy dog in the garden",
+            "query_token": "fox",
+            "near_tokens": ["brown", "jumps"],
+            "far_tokens": ["the", "garden"],
+            "expected_stronger_attention": "near_tokens",
+            "difficulty": "medium"
+          }
+        ]
+      },
+      "extrapolation": {
+        "description": "Test model behavior on sequences longer than training data",
+        "training_max_length": 32,
+        "test_sequences": [
+          {
+            "length": 48,
+            "input": "A very long sequence with many tokens that exceeds the typical training length used during model development to test extrapolation capabilities of positional encodings",
+            "task": "maintain_attention_quality",
+            "difficulty": "medium"
+          },
+          {
+            "length": 64,
+            "input": "This is an even longer sequence designed to push the boundaries of positional encoding extrapolation where traditional learned embeddings would fail but sinusoidal or rotary encodings should maintain reasonable performance through their mathematical properties",
+            "task": "position_consistency",
+            "difficulty": "hard"
+          }
+        ]
+      }
+    },
+    "evaluation_criteria": {
+      "position_identification": {
+        "metric": "exact_match_accuracy",
+        "threshold": 0.95,
+        "description": "Percentage of correct position identifications"
+      },
+      "relative_position": {
+        "metric": "distance_accuracy",
+        "threshold": 0.90,
+        "description": "Accuracy of relative distance predictions"
+      },
+      "sequence_ordering": {
+        "metric": "ordering_accuracy",
+        "threshold": 0.85,
+        "description": "Percentage of correctly identified sequence orders"
+      },
+      "distance_sensitivity": {
+        "metric": "attention_ratio",
+        "threshold": 2.0,
+        "description": "Ratio of attention to near vs far tokens"
+      },
+      "extrapolation": {
+        "metric": "performance_degradation",
+        "threshold": 0.20,
+        "description": "Maximum allowed performance drop on longer sequences"
+      }
+    },
+    "baseline_results": {
+      "sinusoidal_encoding": {
+        "position_identification": 0.97,
+        "relative_position": 0.93,
+        "sequence_ordering": 0.89,
+        "distance_sensitivity": 2.3,
+        "extrapolation": 0.15
+      },
+      "learned_encoding": {
+        "position_identification": 0.98,
+        "relative_position": 0.95,
+        "sequence_ordering": 0.91,
+        "distance_sensitivity": 2.1,
+        "extrapolation": 0.45
+      },
+      "rope_encoding": {
+        "position_identification": 0.96,
+        "relative_position": 0.97,
+        "sequence_ordering": 0.88,
+        "distance_sensitivity": 2.8,
+        "extrapolation": 0.12
+      },
+      "relative_encoding": {
+        "position_identification": 0.94,
+        "relative_position": 0.98,
+        "sequence_ordering": 0.86,
+        "distance_sensitivity": 3.2,
+        "extrapolation": 0.18
+      }
+    }
+  }
+  

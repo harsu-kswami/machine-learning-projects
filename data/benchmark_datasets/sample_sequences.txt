@@ -1,0 +1,66 @@
+# Short sequences (8-16 tokens)
+The cat sat.
+Hello world today.
+Quick brown fox jumps.
+Machine learning works well.
+Simple test case here.
+One two three four five.
+Red blue green yellow orange.
+Apple banana cherry date elderberry.
+
+# Medium sequences (16-32 tokens)
+The quick brown fox jumps over the lazy dog in the meadow.
+Machine learning models require extensive training data for optimal performance and accuracy.
+Transformer architectures use self-attention mechanisms to process sequential input data effectively.
+Natural language processing has advanced significantly with the introduction of large language models.
+Deep neural networks learn complex patterns and representations from high-dimensional input data.
+Attention mechanisms allow models to focus on relevant parts of the input sequence.
+Positional encodings help transformers understand the order and structure of input tokens.
+Multi-head attention enables models to capture different types of relationships simultaneously.
+
+# Long sequences (32-64 tokens)
+The development of transformer architectures has revolutionized the field of natural language processing by enabling models to process sequences in parallel rather than sequentially which significantly reduces training time and improves performance.
+Positional encodings are crucial components of transformer models because they provide information about token positions in sequences since the self-attention mechanism itself is permutation invariant and cannot distinguish between different orderings.
+Machine learning research has progressed rapidly in recent years with the development of increasingly sophisticated models that can perform complex tasks such as language translation text summarization question answering and creative writing.
+Deep learning architectures consisting of multiple layers of neural networks can learn hierarchical representations of data where lower layers capture simple features and higher layers combine them into more complex patterns.
+
+# Very long sequences (64+ tokens)
+The field of artificial intelligence has experienced unprecedented growth and development in recent decades with machine learning techniques becoming increasingly sophisticated and capable of solving complex real world problems that were previously thought to be intractable requiring human level intelligence and reasoning capabilities that seemed impossible to replicate.
+Modern transformer architectures such as BERT GPT and T5 have demonstrated remarkable capabilities in natural language understanding and generation tasks by leveraging massive amounts of training data and computational resources to learn rich representations of language that capture semantic syntactic and pragmatic aspects of human communication.
+Positional encoding mechanisms in transformer models serve the critical function of providing sequence order information to self-attention layers which are inherently permutation invariant and would otherwise be unable to distinguish between different arrangements of input tokens leading to identical representations regardless of word order.
+
+# Repetitive sequences for pattern analysis
+A A B B C C D D E E F F G G H H I I J J
+The the cat cat sat sat on on the the mat mat quickly quickly
+One one two two three three four four five five six six seven seven
+First first second second third third fourth fourth fifth fifth sixth sixth
+
+# Sequential patterns
+Monday Tuesday Wednesday Thursday Friday Saturday Sunday
+January February March April May June July August September October November December
+First second third fourth fifth sixth seventh eighth ninth tenth
+Alpha beta gamma delta epsilon zeta eta theta iota kappa lambda mu
+
+# Mathematical sequences
+One two three four five six seven eight nine ten eleven twelve
+First prime second prime third prime fourth prime fifth prime
+Even odd even odd even odd even odd even odd
+Plus minus multiply divide plus minus multiply divide
+
+# Code-like sequences
+Function definition parameter argument return value type class
+Import module from package as alias with statement
+If condition then action else alternative end
+For loop variable in range start stop step
+
+# Scientific terminology
+Hypothesis experiment observation data analysis conclusion
+Theory model prediction validation verification
+Input processing output feedback control system
+Energy matter force motion acceleration velocity
+
+# Complex nested structures
+The main function calls helper function which processes data and returns results
+Subject verb object modifier clause phrase sentence paragraph
+Encoder layer attention feedforward normalization residual connection
+Training validation testing deployment monitoring maintenance
